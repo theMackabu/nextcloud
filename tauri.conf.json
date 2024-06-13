@@ -1,0 +1,59 @@
+{
+	"build": {
+		"devPath": "./stub",
+		"distDir": "./stub",
+		"withGlobalTauri": true
+	},
+	"package": {
+		"productName": "NextCloud",
+		"version": "0.1.0"
+	},
+	"tauri": {
+		"allowlist": {
+			"all": false,
+			"shell": {
+				"all": false,
+				"open": true
+			},
+			"window": {
+				"all": false,
+				"close": true,
+				"hide": true,
+				"show": true,
+				"maximize": true,
+				"minimize": true,
+				"unmaximize": true,
+				"unminimize": true,
+				"startDragging": true
+			}
+		},
+		"windows": [
+			{
+				"width": 1300,
+				"height": 750,
+				"resizable": true,
+				"transparent": true,
+				"title": "NextCloud",
+				"url": "https://cloud.gsr.sh"
+			}
+		],
+		"macOSPrivateApi": true,
+		"security": {
+			"csp": null,
+			"dangerousRemoteDomainIpcAccess": [
+				{
+					"scheme": "https",
+					"windows": ["main"],
+					"domain": "cloud.gsr.sh",
+					"enableTauriAPI": true
+				}
+			]
+		},
+		"bundle": {
+			"active": true,
+			"targets": "all",
+			"identifier": "dev.themackabu.nextcloud",
+			"icon": ["icons/icon.icns"]
+		}
+	}
+}

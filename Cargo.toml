@@ -1,0 +1,21 @@
+[package]
+name = "nextcloud"
+version = "0.1.0"
+description = "nextcloud app"
+authors = ["you"]
+edition = "2021"
+
+
+[build-dependencies]
+tauri-build = { version = "1", features = [] }
+
+[dependencies]
+tauri = { version = "1", features = [ "macos-private-api", "window-hide", "window-maximize", "window-unminimize", "window-start-dragging", "window-minimize", "window-unmaximize", "window-show", "window-close", "shell-open"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+cocoa = "0.25.0"
+objc = "0.2.7"
+window-vibrancy = "0.4"
+
+[features]
+custom-protocol = ["tauri/custom-protocol"]
