@@ -6,7 +6,7 @@
 	},
 	"package": {
 		"productName": "NextCloud",
-		"version": "0.1.0"
+		"version": "0.1.1"
 	},
 	"tauri": {
 		"allowlist": {
@@ -34,7 +34,8 @@
 				"resizable": true,
 				"transparent": true,
 				"title": "NextCloud",
-				"url": "https://cloud.gsr.sh"
+				"url": "https://cloud.gsr.sh",
+				"userAgent": "Mozilla/5.0 (NextCloud 29) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
 			}
 		],
 		"macOSPrivateApi": true,

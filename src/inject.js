@@ -10,15 +10,22 @@ const dragRegionProperties = {
 const smallRegionProperties = {
 	zIndex: 1000,
 	height: '50px',
-	width: '39%',
+	width: '20%',
 	position: 'fixed',
 	top: '0',
-	left: '45%'
+	right: '16%'
 };
 
 document.addEventListener('DOMContentLoaded', () => {
 	const styleElement = document.createElement('style');
-	const cssRule = 'html, body { background: transparent; }';
+
+	const cssRule = `
+		html, body { background: transparent !important; }
+		:root { --color-main-background: transparent !important; }
+		#header { background-color: rgba(23,23,23,.6) !important; }
+		.app-navigation { background-color: rgba(23,23,23,.3) !important; }
+		.header-menu__wrapper { background-color: rgba(23,23,23,.5) !important; }
+	`;
 
 	styleElement.appendChild(document.createTextNode(cssRule));
 	document.head.appendChild(styleElement);
